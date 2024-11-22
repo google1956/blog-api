@@ -61,12 +61,11 @@ export class BlogController {
         const { page, limit } = query
 
         if (page && Number(page) > 0) {
-            payload.page = Number(page) - 1
+            payload.page = Number(page)
         }
         if (limit && Number(limit) > 0) {
             payload.limit = Number(limit)
         }
-
         const result = await this.blogService.getBlogList(payload, account_id)
 
         return response.status(HttpStatus.OK).json({

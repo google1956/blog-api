@@ -19,7 +19,7 @@ import { BlogModule } from './modules/blog/blog.module';
       global: true,
       secret: jwtConstants.secret,
     }),
-    MongooseModule.forRoot('mongodb://localhost:27017/myblog'),
+    MongooseModule.forRoot('mongodb+srv://david:FHCTH3Lep$cCip3@cluster0.kafs9.mongodb.net/myblog'),
     AuthModule,
     BlogModule,
   ],
